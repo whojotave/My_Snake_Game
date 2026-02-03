@@ -1,5 +1,6 @@
 #include "corpo.h"
 
+// Construtor: inicializa o retângulo que representa o segmento
 Corpo::Corpo(float x, float y){
     formato.setSize(sf::Vector2f(16,16));
     formato.setFillColor(sf::Color(4,51,43));
@@ -8,12 +9,17 @@ Corpo::Corpo(float x, float y){
     formato.setOutlineColor(sf::Color(132,164,108));
 }
 
+// Desenha o segmento na janela SFML
 void Corpo::Draw(sf::RenderWindow &window){
     window.draw(this->formato);
 }
+
+// Move o segmento aplicando um deslocamento (usado para atualizar posição)
 void Corpo::Move(sf::Vector2f dir){
     formato.move(dir);
 }
+
+// Tratamento de bordas: faz wrap-around quando o segmento sai da área
 void Corpo::bordas(float &x,float &y,float largura, float altura){
     sf::Vector2f pos = formato.getPosition();
     

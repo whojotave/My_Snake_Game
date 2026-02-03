@@ -6,6 +6,12 @@
 #include "food.h"
 #include "interface/fundo.h"
 #include "interface/placar.h"
+
+// main.cpp
+// Ponto de entrada do jogo "Snake Game".
+// Contém a inicialização da janela SFML, o laço principal do jogo,
+// leitura de input do teclado, atualização do estado (cobra, comida,
+// placar) e renderização das entidades.
 int main()
 {
 
@@ -98,4 +104,4 @@ int main()
         window.display();
     }
 }
-// proximo passo: adicionar sprites de cobra e etc.. e adicionar placar
+

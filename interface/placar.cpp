@@ -1,5 +1,5 @@
 #include "placar.h"
-
+// Inicializa fontes e textos do placar
 Placar::Placar(){
     fonte.loadFromFile("interface/fontes/Zepter_Pro.ttf");
     fonte2.loadFromFile("interface/fontes/Digit.TTF");
@@ -16,11 +16,13 @@ Placar::Placar(){
 
 }
 
+// Desenha o rótulo e o valor da pontuação
 void Placar::Draw(sf::RenderWindow &window){
     window.draw(this->texto);
     window.draw(this->texto2);
 }
 
+// Atualiza texto do valor com o valor atual de `pontuacao`
 void Placar::atualizarPontuacao(){
     texto2.setString(std::to_string(this->pontuacao));
 }

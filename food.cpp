@@ -1,13 +1,18 @@
 #include "food.h"
-
+// Construtor: configura a aparência inicial da comida
 Food::Food(float x, float y){
     food.setSize(sf::Vector2f(16,16));
     food.setFillColor(sf::Color::Red);
     food.setPosition(x,y);
 }
+
+// Desenha a comida na janela
 void Food::Draw(sf::RenderWindow &window){
     window.draw(this->food);
 }
+
+// Reposiciona a comida em uma posição aleatória válida,
+// garantindo que não apareça em cima de qualquer segmento da cobra.
 void Food::comer(Snake &s){
     std::random_device rd;
     std::mt19937 gen(rd());
@@ -39,6 +44,7 @@ void Food::comer(Snake &s){
     food.setPosition(x, y);
 }
 
+// Retorna a posição atual da comida
 sf::Vector2f Food::getPosition(){
     return food.getPosition();
 }
