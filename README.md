@@ -4,7 +4,7 @@ Um clássico jogo da cobra desenvolvido em C++ com a biblioteca **SFML** (Simple
 
 ## 📋 Descrição
 
-Este projeto implementa o jogo Snake tradicional, onde você controla uma cobra que se move pela tela, come comida e cresce. O objetivo é comer o máximo de comida possível sem bater nas bordas ou em si mesma.
+Este projeto implementa o jogo Snake tradicional, onde você controla uma cobra que se move pela tela, come comida e cresce. O objetivo é comer o máximo de comida possível sem bater em si mesma.
 
 ## 🎮 Como Jogar
 
